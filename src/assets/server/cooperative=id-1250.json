@@ -1,0 +1,12 @@
+{
+    "cpf": "59138659018",
+    "id": 1250,
+    "nome": "Mariane de Sousa Oliveira",
+    "situacao": "Regular",
+    "constasAplicacao": [
+        { "numero": "557932-4" }
+    ],
+    "constasCorrente": [
+        { "numero": "778461-8" }
+    ]
+}

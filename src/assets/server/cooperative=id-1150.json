@@ -1,0 +1,12 @@
+{
+    "cpf": "55973637000",
+    "id": 1150,
+    "nome": "Everton da Oliveira",
+    "situacao": "Regular",
+    "constasAplicacao": [ 
+        { "numero": "894656-4" }
+    ],
+    "constasCorrente": [
+        { "numero": "748562-2" }
+    ]
+}

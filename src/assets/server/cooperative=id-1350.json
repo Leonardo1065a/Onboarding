@@ -1,0 +1,12 @@
+{
+    "cpf": "94869916002",
+    "id": 1350,
+    "nome": "Alexandra de Paiva",
+    "situacao": "Iregular",
+    "constasAplicacao": [
+        { "numero": "325645-9" }
+    ],
+    "constasCorrente": [
+        { "numero": "787460-3" }
+    ]
+}

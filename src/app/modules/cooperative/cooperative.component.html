@@ -1,0 +1,49 @@
+<div class="content-body">
+    <app-stepper></app-stepper>
+    
+    <div class="row">
+        <div class="col-md-6 message">
+            <span>Informe o CPF do futuro cooperado (a)</span>
+            <p>Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.</p>
+            <p>Digite apenas os números(sem ponto ou traços).</p>
+        </div>
+    </div>
+    
+    <div class="g-3">
+        <form class="row needs-validation" (ngSubmit)="click()" novalidate>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+                <label class="form-label">CPF</label>
+                <input type="text" class="form-control" [formControl]="cpf" mask="000.000.000-00" placeholder="000.000.000-00" required>
+                <div class="text-invalid" *ngIf="cpf.getError('cpfNotValid')">
+                    <p>Informe um CPF válido</p>
+                </div>
+                <div class="text-invalid" *ngIf="cpf.getError('required') && cpf.touched">
+                    <p>Informe um CPF</p>
+                </div>
+            </div>
+            <div class="button col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <button class="btn bg-primary" type="submit" [disabled]="manageSearchButtonPresenter.isDisabled">
+                    <span *ngIf="load; else loading" class="fa fa-spinner" role="status" aria-hidden="true"></span>
+                    <ng-template #loading>
+                        <span> Consultar por CPF</span>
+                    </ng-template>
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="detail">
+        <div class="loading" *ngIf="loadDetail">
+            <div class="spinner-grow text-primary" role="status"></div>
+            <div class="spinner-grow text-primary" role="status"></div>
+            <div class="spinner-grow text-primary" role="status"></div>
+            <div class="spinner-grow text-primary" role="status"></div>
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+
+</div>
+
+
+<ngb-alert #selfClosingAlert *ngIf="warningMessage" type="warning" (closed)="warningMessage = ''">{{ warningMessage }}</ngb-alert>

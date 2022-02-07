@@ -1,0 +1,98 @@
+<div class="row">
+    <div class="card-width col-md-4 col-lg-2">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Situação cadastral do CPF</h6>
+                <p class="card-text">Consulta na Receita Federal</p>
+                <div class="card-body">
+                    <div class="box row">
+                        <div class="col-md-2 p-0">
+                            <div class="icon">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-10 p-0">
+                            <div class="text">
+                                <span>Nome</span>
+                                <p>{{ memberDetail.nome }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box row">
+                        <div class="col-md-2 p-0">
+                            <div class="icon">
+                                <i *ngIf="memberDetail.situacao === 'Regular'" class="fa fa-check-circle-o bg-green" aria-hidden="true"></i>
+                                <i *ngIf="memberDetail.situacao === 'Iregular'" class="fa fa-times-circle-o bg-red" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-10 p-0">
+                            <div class="text">
+                                <span>Situação do CPF</span>
+                                <p>{{ memberDetail.situacao }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-width col-md-4 col-lg-2">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Conta aplicação</h6>
+                <p class="card-text">Cooperativa Viacredi</p>
+                <div class="card-body">
+                    <div class="box row" *ngFor="let conta of memberDetail.constasAplicacao">
+                        <div class="col-md-2 p-0">
+                            <div class="icon">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-10 p-0">
+                            <div class="text">
+                                <span>Número da conta</span>
+                                <p>{{ conta.numero }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box row" *ngIf="memberDetail.constasAplicacao.length < 2">
+                        <div class="col-md-12 p-0">
+                            <a (click)="duplicateApplicationAccount()">Duplicar conta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-2">
+        <div class="card">
+            <div class="card-body">
+                <h6 class="card-title">Conta corrente</h6>
+                <p class="card-text">Cooperativa Viacredi</p>
+                <div class="card-body">
+                    <div class="box row" *ngFor="let conta of memberDetail.constasCorrente">
+                        <div class="col-md-2 p-0">
+                            <div class="icon">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-10 p-0">
+                            <div class="text">
+                                <span>Número da conta</span>
+                                <p>{{ conta.numero }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box row" *ngIf="memberDetail.constasCorrente.length < 2">
+                        <div class="col-md-12 p-0">
+                            <a (click)="duplicateCheckingAccount()">Duplicar conta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

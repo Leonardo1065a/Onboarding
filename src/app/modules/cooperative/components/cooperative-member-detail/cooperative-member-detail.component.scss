@@ -1,0 +1,56 @@
+$gray-color: rgb(79 87 94);
+$blue-color: rgb(22, 93, 126);
+
+.card-body {
+    h6 {
+        font-weight: 700;
+        margin: 0;
+
+    }
+    p {
+        margin: 0;
+        font-size: 13px;
+        color: $gray-color;
+    }
+
+    .box {
+        margin-top: 10px;
+        .icon {
+            font-size: 26px;
+            color: $gray-color;
+        }
+        .bg-green {
+            color: green;
+        }
+        .bg-red {
+            color: red;
+        }
+        .text {
+            span {
+                font-size: 12px;
+                color: $gray-color;
+            }
+            p {
+                font-size: 13px;
+                font-weight: 700;
+            }
+        }
+        a {
+            color: $blue-color;
+            text-decoration: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .box.row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}

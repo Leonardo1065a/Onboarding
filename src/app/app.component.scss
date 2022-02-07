@@ -1,0 +1,38 @@
+.loading {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 93, 126);
+}
+
+.pulse-container {
+    width: 70px;
+    display: flex;
+    justify-content: space-between
+}
+
+.p-bars {
+    display: block;
+    height: 36px;
+    width: 16px;
+    animation: scale 1600ms ease-in-out infinite;
+    animation-delay: 100ms;
+    transform-origin: 50% 50%;
+    background-color: #FFF;
+}
+
+@keyframes scale {
+    0% {
+        opacity: 1;
+        transform: scale(1.5)
+    }
+
+    50% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(1.5)
+    }
+}

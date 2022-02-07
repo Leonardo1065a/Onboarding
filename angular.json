@@ -31,8 +31,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/font-awesome/css/font-awesome.css"
             ],
+            "allowedCommonJsDependencies": [
+              "rxjs-compat"
+           ],
             "scripts": []
           },
           "configurations": {

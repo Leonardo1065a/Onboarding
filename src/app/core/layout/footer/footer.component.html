@@ -1,0 +1,46 @@
+<div class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="button" *ngIf="managerFooterPresenter.btnIniciarAdmissao">
+                    <button class="primary">Iniciar nova admissão</button>
+                </div>
+                <div class="button" *ngIf="managerFooterPresenter.btnDicas">
+                    <button  type="button" class="secundary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Dicas para admissão</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h4 id="offcanvasRightLabel">Check-list para abertura da conta</h4>
+  </div>
+  <div class="offcanvas-body">
+    <p>Confira algumas dicas que irão lhe ajudar neste atendimento para que a admissão aconteça da melhor forma possível.</p>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="">
+      <label class="form-check-label" for="flexCheckDefault">
+        Conheça seu cooperado
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="">
+      <label class="form-check-label" for="flexCheckDefault">
+        Fale sobre a Cooperativa
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="">
+      <label class="form-check-label" for="flexCheckDefault">
+        Documentos e comprovações necessárias
+      </label>
+    </div>
+
+    <div class="button">
+      <button  type="button" class="secundary" data-bs-dismiss="offcanvas">Continuar atendimento</button>
+    </div>
+
+  </div>
+</div>

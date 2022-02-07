@@ -1,0 +1,50 @@
+:host::ng-deep {
+    .footer {
+        padding: 20px 10px;
+        height: min-content;
+        background-color: rgb(255, 255, 255);
+        font-family: sans-serif;
+        margin-left: 100px;
+        bottom: 0;
+        position: absolute;
+        width: calc(100% - 100px);
+    }
+
+    .button {
+        margin-right: 15px;
+        float: left;
+    }
+
+    .primary {
+        background-color: rgb(22, 93, 126);
+        color: #fff;
+        padding: 10px 20px;
+        border: 1px solid rgb(22, 93, 126);
+        &:hover {
+            background-color: #184052
+        }
+    }
+
+    .secundary {
+        background-color: rgb(255, 255, 255);
+        color: rgb(22, 93, 126);
+        padding: 10px 20px;
+        border: 1px solid rgb(22, 93, 126);
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.102);
+        }
+    }
+
+    h4 {
+        padding: 0 1rem;
+    }
+
+    .offcanvas-body {
+        padding: 1rem 2rem;
+        button {
+            position: absolute;
+            bottom: 30px;
+            margin-left: 60px;
+        }
+    }
+}
